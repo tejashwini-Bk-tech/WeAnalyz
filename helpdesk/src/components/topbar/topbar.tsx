@@ -12,11 +12,11 @@ export default function Topbar() {
         </div>
 
         <div className="flex flex-row items-center">
-          <Search size={20} className="relative left-5 text-white" />
+          <Search size={20} className="relative left-5 text-neutral-300" />
           <input
             type="text"
             placeholder="Search Capacity..."
-            className=" w-72 h-9 px-7 rounded placeholder-white text-white bg-blue-950 "
+            className=" w-72 h-9 px-7 rounded placeholder-neutral-300 text-neutral-300 bg-blue-950  "
           />
         </div>
 
