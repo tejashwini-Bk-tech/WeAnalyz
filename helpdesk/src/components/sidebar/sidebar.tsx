@@ -12,7 +12,7 @@ import type React from "react";
 export default function Sidebar() {
   return (
     <>
-      <aside className="bg-blue-700 w-10 h-screen">
+      <aside className="bg-blue-700 w-12 h-screen">
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-semibold text-white bg-blue-500 w-4 px-4 rounded flex justify-center mt-1 ">
             C
