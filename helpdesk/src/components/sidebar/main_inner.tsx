@@ -6,7 +6,14 @@ import { useState, useRef } from "react";
 import { Checkbox } from "../ui/checkbox";
 import { Label } from "../ui/label";
 import { Image, Paperclip, Send } from "lucide-react";
-
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Avatar } from "../ui/avatar";
+import { AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 export default function MainInner() {
   const [text, setText] = useState("");
   const textRef = useRef<HTMLTextAreaElement>(null);
@@ -101,7 +108,7 @@ export default function MainInner() {
 
   return (
     <>
-      <main className="bg-neutral-100 w-full h-full p-3">
+      <main className="bg-neutral-100 w-full h-full p-3 flex flex-col gap-3">
         <div className="bg-white rounded border border-neutral-200 shadow-lg">
           <div className="flex gap-2 ">
             <Button
@@ -134,6 +141,7 @@ export default function MainInner() {
               className="w-full h-40 p-2 outline-none"
               value={text}
               onChange={(e) => setText(e.target.value)}
+              placeholder="Add a replay..."
             ></textarea>
             <div>
               <div className="flex justify-between items-baseline">
@@ -180,6 +188,29 @@ export default function MainInner() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="bg-white rounded border border-neutral-200 shadow-lg p-1.5 flex gap-3 w-full">
+          <Avatar className="bg-amber-300 flex items-center justify-center">
+            <AvatarFallback>TK</AvatarFallback>
+            <AvatarImage src="" />
+          </Avatar>
+          <div className="flex flex-col w-full ">
+            <h2 className="font-medium text-[15px]">Allia Harmon</h2>
+            <Accordion type="single" collapsible
+            className="-mt-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  To:Danney Amarican {"<danny@gmail.com>"}
+                </AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  vitae libero quisquam reiciendis? Odio voluptatem rem, atque
+                  cumque dolore tempora labore. Nesciunt, cumque perferendis!
+                  Molestias pariatur modi accusantium dolorem. Cupiditate.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </main>
