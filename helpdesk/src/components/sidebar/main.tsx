@@ -7,10 +7,10 @@ import MainInner from "./main_inner";
 export default function MainDashboard() {
   return (
     <>
-      <div className="h-full w-full ">
+      <div className="w-full">
         <HeaderMain />
         <Separator />
-        <MainInner />
+        <MainInner  />
         
       </div>
     </>

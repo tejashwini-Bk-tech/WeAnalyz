@@ -1,44 +1,46 @@
 "use client";
 
-import {
-  Sidebar,
-  SidebarTrigger,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
-} from "@/components/ui/sidebar";
+import { Input } from "../ui/input";
+import MyTicketsHead from "./my_tickets_head";
+import { Separator } from "../ui/separator";
+import { Label } from "../ui/label";
+import { Checkbox } from "../ui/checkbox";
+import { Badge } from "../ui/badge";
+import { CircleMinus } from "lucide-react";
 
-
-import { ChevronDown } from "lucide-react";
-import DropDown from "./dropdown";
-
-
+import { Avatar, AvatarFallback } from "../ui/avatar";
+import { AvatarImage } from "@radix-ui/react-avatar";
 export default function MyTickets() {
   return (
     <>
-      <div className="flex flex-row">
-        <div>
-          <Sidebar className="relative w-64 h-full ">
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <div className="flex flex-row items-center justify-between ">
-                  <div className="">
-                    <SidebarTrigger />
-                  </div>
-                  <div>
-                    <SidebarMenuButton className="hover:bg-neutral-50 font-semibold">
-                      My Tickets
-                      <ChevronDown className="ml-2" />
-                    </SidebarMenuButton>
-                  </div>
-                  <div className="relative">
-                   <DropDown/>
-                  </div>
-                </div>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </Sidebar>
+      <MyTicketsHead />
+      <div>
+        <div className="">
+          <Input placeholder="Search tickets" />
         </div>
+        <Separator />
+        <div className="w-full h-full flex flex-col gap-2">
+          <div className="flex flex-row justify-between">
+            <p className="text-[15px] font-medium">soluta quam velit </p>
+            <p>jan 1</p>
+          </div>
+          <div className="flex flex-row justify-between items-baseline">
+            <div className="flex items-center gap-1">
+              <Label htmlFor="terms" className="text-[13px]">APPS-216</Label>
+              <Checkbox id="terms" />
+            </div>
+            <div className="flex flex-row gap-1 items-center">
+              <Badge className="bg-blue-400 ">To Do</Badge>
+              <CircleMinus className="text-green-400"/>
+              <Avatar className="w-8 h-8 flex justify-center items-center">
+                <AvatarFallback>TK</AvatarFallback>
+                <AvatarImage src="0"/>
+              </Avatar>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <Separator/>
       </div>
     </>
   );

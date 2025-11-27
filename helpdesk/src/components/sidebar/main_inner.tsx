@@ -108,7 +108,7 @@ export default function MainInner() {
 
   return (
     <>
-      <main className="bg-neutral-100 w-full h-full p-3 flex flex-col gap-3">
+      <main className="bg-neutral-100 w-full h-fit p-3 flex flex-col gap-3">
         <div className="bg-white rounded border border-neutral-200 shadow-lg">
           <div className="flex gap-2 ">
             <Button
@@ -196,15 +196,42 @@ export default function MainInner() {
             <AvatarImage src="" />
           </Avatar>
           <div className="flex flex-col w-full ">
-            <h2 className="font-medium text-[15px]">Allia Harmon</h2>
-            <Accordion type="single" collapsible
-            className="-mt-4">
+            <div className="flex justify-between">
+              <h2 className="font-medium text-[15px]">Allia Harmon</h2>
+              <p className="text-[13px] font-semibold">Feb 9,2025 10:31PM</p>
+            </div>
+            <Accordion type="single" collapsible className="-mt-4">
               <AccordionItem value="item-1">
                 <AccordionTrigger>
                   To:Danney Amarican {"<danny@gmail.com>"}
                 </AccordionTrigger>
                 <AccordionContent>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                  vitae libero quisquam reiciendis? Odio voluptatem rem, atque
+                  cumque dolore tempora labore. Nesciunt, cumque perferendis!
+                  Molestias pariatur modi accusantium dolorem. Cupiditate.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+        <div className="bg-white rounded border border-neutral-200 shadow-lg p-1.5 flex gap-3 w-full">
+          <Avatar className="bg-amber-300 flex items-center justify-center">
+            <AvatarFallback>PK</AvatarFallback>
+            <AvatarImage src="" />
+          </Avatar>
+          <div className="flex flex-col w-full ">
+            <div className="flex justify-between">
+              <h2 className="font-medium text-[15px]">kmath Harmon</h2>
+              <p className="text-[13px] font-semibold">Mar 9,2025 8:31PM</p>
+            </div> 
+            <Accordion type="single" collapsible className="-mt-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  To:Amarican Homi {"<dannyhomi@gmail.com>"}
+                </AccordionTrigger>
+                <AccordionContent>
+                  Lorem ipsum dolor Danneysit amet consectetur adipisicing elit. Aut
                   vitae libero quisquam reiciendis? Odio voluptatem rem, atque
                   cumque dolore tempora labore. Nesciunt, cumque perferendis!
                   Molestias pariatur modi accusantium dolorem. Cupiditate.

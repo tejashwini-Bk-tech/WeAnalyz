@@ -26,11 +26,11 @@ return(
                 </div>
                 <Ellipsis size={15}/>
                 <div className="flex items-center">
-                  <Avatar className="bg-neutral-200 w-7 h-7 relative bottom-1 ">
+                  <Avatar className="bg-neutral-200 w-7 h-7 relative bottom-1 flex items-center justify-center ">
                     <AvatarImage/>
                     <AvatarFallback>DK</AvatarFallback>
                   </Avatar>
-                  <Avatar className="bg-neutral-200 w-7 h-7 -ml-1 relative bottom-1">
+                  <Avatar className="bg-neutral-200 w-7 h-7 -ml-1 relative bottom-1 flex items-center justify-center">
                      <AvatarImage/>
                     <AvatarFallback>TK</AvatarFallback>
                   </Avatar>
