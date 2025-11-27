@@ -1,4 +1,4 @@
-import { Ticket } from "lucide-react";
+
 import AppLayout from "@/layouts/AppLayout";
 
 function App() {
