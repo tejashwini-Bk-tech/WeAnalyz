@@ -10,12 +10,12 @@ export default function DashboardLayout() {
  
         <div className=" h-full bg-neutral-100 flex flex-row ">
           <TicketViews />
-          <div className="flex flex-row  gap-1 bg-white p-4 px-1 py-2 m-0 w-full h-full mt-1 mb-1 rounded-2xl shadow-lg ">
+          <div className="flex flex-row  gap-1 bg-white p-4 px-1 py-2 m-0 w-full h-fit mt-1 mb-1 rounded-2xl shadow-lg ">
             <div className="">
               <MyTickets />
             </div>
 
-            <div className="">
+            <div className="w-full">
               <MainDashboard />
             </div>
 

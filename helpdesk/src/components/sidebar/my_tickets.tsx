@@ -18,7 +18,7 @@ export default function MyTickets() {
     <>
       <div className="flex flex-row">
         <div>
-          <Sidebar className="relative w-64 h-[92vh] ">
+          <Sidebar className="relative w-64 h-full ">
             <SidebarMenu>
               <SidebarMenuItem>
                 <div className="flex flex-row items-center justify-between ">
