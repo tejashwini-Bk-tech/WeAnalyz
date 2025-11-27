@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Sidebar,
   SidebarTrigger,
@@ -7,34 +7,40 @@ import {
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
 
-
 import { ChevronDown } from "lucide-react";
 import DropDown from "./dropdown";
-export default function MyTicketsHead(){
-    return(
-        <>
-        <div>
-          <Sidebar className="relative w-64 h-full ">
-            <SidebarMenu>
-              <SidebarMenuItem className="mb-2 mt-1">
-                <div className="flex flex-row items-center justify-between ">
-                  <div className="">
-                    <SidebarTrigger />
-                  </div>
-                  <div>
-                    <SidebarMenuButton className="hover:bg-neutral-50 font-semibold ">
-                      My Tickets
-                      <ChevronDown className="ml-2" />
-                    </SidebarMenuButton>
-                  </div>
-                  <div className="relative">
-                   <DropDown/>
-                  </div>
+import MyTicketsList from "./my_ticket_list";
+import { Menu } from "lucide-react";
+
+export default function MyTicketsHead() {
+  return (
+    <>
+      <div className="flex flex-row">
+      
+        <Sidebar className="relative w-64 h-full ">
+          <SidebarMenu>
+            <SidebarMenuItem className="mb-2 mt-1">
+              <div className="flex flex-row items-center justify-between ">
+                <div className="">
+                  <SidebarTrigger />
                 </div>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </Sidebar>
-        </div>
-        </>
-    )
+                <div>
+                  <SidebarMenuButton className="hover:bg-neutral-50 font-semibold ">
+                    My Tickets
+                    <ChevronDown className="ml-2" />
+                  </SidebarMenuButton>
+                </div>
+                <div className="relative">
+                  <DropDown />
+                </div>
+              </div>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <MyTicketsList />
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </Sidebar>
+      </div>
+    </>
+  );
 }
