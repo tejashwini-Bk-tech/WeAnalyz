@@ -1,13 +1,15 @@
 "use client";
 import { Search } from "lucide-react";
+import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 import RightTopbar from "./topbar_right";
 
-
 export default function Topbar() {
+  const { state } = useSidebar();
   return (
     <>
       <div className="flex flex-row justify-between items-center h-12 w-full bg-blue-700 px-3">
-        <div>
+        <div className="flex items-center gap-3">
+          {state !== "expanded" && <SidebarTrigger />}
           <h1 className="font-semibold text-white text-[20px]">Helpdesk</h1>
         </div>
 
@@ -20,7 +22,7 @@ export default function Topbar() {
           />
         </div>
 
-        <RightTopbar/>
+        <RightTopbar />
       </div>
     </>
   );

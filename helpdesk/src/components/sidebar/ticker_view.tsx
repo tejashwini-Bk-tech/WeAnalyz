@@ -35,50 +35,57 @@ export default function TicketViews() {
               <SidebarGroupContent className="flex flex-col gap-2 items-baseline w-full h-full mt-3  ">
                 <SidebarMenu>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>My Tickets</ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        My Tickets
+                      </Button>
                     </SidebarMenuButton>
                     <SidebarMenuBadge>24</SidebarMenuBadge>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>Past Due</ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        Past Due
+                      </Button>
                     </SidebarMenuButton>
                     <SidebarMenuBadge>24</SidebarMenuBadge>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>High Priority</ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        High Priority
+                      </Button>
                     </SidebarMenuButton>
                     <SidebarMenuBadge>24</SidebarMenuBadge>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>Unassigned</ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        Unassigned
+                      </Button>
                     </SidebarMenuButton>
                     <SidebarMenuBadge>24</SidebarMenuBadge>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>All Tickets</ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        All Tickets
+                      </Button>
                     </SidebarMenuButton>
                     <SidebarMenuBadge>24</SidebarMenuBadge>
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>
-                        <Headset />
-                        LIVE CHATS
-                      </ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        <Headset /> LIVE CHATS
+                      </Button>
                     </SidebarMenuButton>
-                    
                   </SidebarMenuItem>
                   <SidebarMenuItem>
-                    <SidebarMenuButton>
-                      <ButtonDesign>
-                        <Table />
-                        BOARDS
-                      </ButtonDesign>
+                    <SidebarMenuButton asChild>
+                      <Button className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none w-full justify-start ">
+                        <Table /> BOARDS
+                      </Button>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 </SidebarMenu>
@@ -91,17 +98,4 @@ export default function TicketViews() {
   );
 }
 
-function ButtonDesign({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <div>
-        <Button
-          className="bg-neutral-100 hover:bg-neutral-100 text-black shadow-none 
-           w-full justify-start "
-        >
-          {children}
-        </Button>
-      </div>
-    </>
-  );
-}
+// ButtonDesign not needed. Use Button directly inside SidebarMenuButton above.
